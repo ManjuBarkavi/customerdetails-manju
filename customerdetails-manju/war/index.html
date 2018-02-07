@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="./css/Customerdetails_manju.css">
+    <title>Customer Details</title>
+  </head>
+  <body>
+       <h1><center>Customer Details</center></h1>
+
+<div class="wrap">
+        <form action="" id="addCustomer">
+            <input id="customer_name" type="text" placeholder="Customer Name" class="form-input" required="customer_name"></input>
+            <input id="customer_email" type="text" placeholder="Customer Email" class="form-input" required="customer_email"></input>
+            <button type="submit" id="addcus" class="form-button">Submit</button>
+        </form>
+                    <table id="allCustomer" class="table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th colspan="7">Actions</th>
+                          </tr>
+                        </thead>
+                    </table>
+</div>
+
+<script id="customerTemplate" type="text/template">
+    <td><span id="name"><%= name %></span></td>
+    <td><span id="email"><%= email %></span></td>      
+    <td><a href="#" class="edit"><span>Edit</span></a></td>
+    <td><a href="#" class="delete"><span>Delete</span></a></td>
+</script>
+
+</body>
+    
+    <script src="./libs/jquery-3.2.1.min.js"></script>
+    <script src="./libs/underscore-min.js"></script>
+    <script src="./libs/backbone-min.js"></script>
+
+    <script src="./Models/customermodel.js"></script>
+    <script src="./collection/customercollection.js"></script>
+    <script src="./view/customeritemview.js"></script>
+    <script src="./view/customerlistview.js"></script>
+
+    <script src="./main.js"></script>
+  
+</html>
